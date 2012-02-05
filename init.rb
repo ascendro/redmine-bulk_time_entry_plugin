@@ -7,6 +7,8 @@ Redmine::Plugin.register :bulk_time_entry_plugin do
   version '0.5.0'
 
   requires_redmine :version_or_higher => '0.9.0'
+
+  permission :log_time_for_others, :bulk_time_entry => :index
   
   menu :top_menu, :bulk_time_entry, {:controller => "bulk_time_entries", :action => 'index'}, 
     :caption => :bulk_time_entry_title, :if => Proc.new{User.current.allowed_to?(:log_time, nil, :global => true)} 
