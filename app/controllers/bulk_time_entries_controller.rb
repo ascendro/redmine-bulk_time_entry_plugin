@@ -94,4 +94,9 @@ class BulkTimeEntriesController < ApplicationController
   def self.allowed_project?(project_id)
     return User.current.projects.find_by_id(project_id, :conditions => Project.allowed_to_condition(User.current, :log_time))
   end
+
+  def self.allowed_to_log_time_for_others(project)
+    User.current.roles_for_project(project).each {|role| return true if role.has_permission?(:log_time_for_others)}
+    false
+  end
 end
