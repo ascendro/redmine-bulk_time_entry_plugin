@@ -30,6 +30,10 @@
     <p id="entry_<%= rnd %>_activities">
       <%= render :partial => 'activities_selector', :locals => {:rnd => rnd, :activities => @first_project.activities } %>
     </p>
+    <p id="entry_<%= rnd %>_members">
+    <% @members = get_members @first_project.id %>
+    <%= render :partial => 'members_selector', :locals => { :members => @members, :f => f, :rnd => rnd } %>
+    </p>
     <% time_entry.custom_field_values.each do |value| %>
       <p><%= custom_field_tag_with_label "time_entries[#{rnd}]", value %></p>
     <% end if time_entry.respond_to?(:custom_field_values) %>

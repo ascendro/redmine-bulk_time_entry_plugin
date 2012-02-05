@@ -5,3 +5,4 @@ en:
   text_bulk_time_entry_permission: You do not have permission to log time on any projects
   text_time_added_to_project: "%{count} hours added to %{target}"
   :log_time_for_others: Log time for others
+  field_member: Provided by

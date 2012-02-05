@@ -1,0 +1,6 @@
+<%= label_for_field :member_id, rnd %>
+<% if @members.nil? || @members.empty? %>
+<em><%= l(:label_no_data) %></em>
+<% else %>
+<%= select_tag "time_entries[#{rnd}][member_id]", options_from_collection_for_select(@members, :id, :name), :style => 'max-width: 95%;' %>&nbsp;
+<% end %>

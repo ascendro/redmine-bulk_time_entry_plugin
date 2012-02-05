@@ -18,6 +18,7 @@ class BulkTimeEntriesController < ApplicationController
 
   def load_assigned_issues
     @issues = get_issues(params[:project_id])
+    @members = get_members(params[:project_id])
     @selected_project = BulkTimeEntriesController.allowed_project?(params[:project_id])
     respond_to do |format|
       format.js {}

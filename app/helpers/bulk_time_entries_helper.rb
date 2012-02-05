@@ -39,4 +39,11 @@ module BulkTimeEntriesHelper
       []
     end
   end
+
+  def get_members(project_id)
+    project = BulkTimeEntriesController.allowed_project?(project_id)
+    members = []
+    members = project.members.all(:order => 'user_id ASC') if project
+    members
+  end
 end
