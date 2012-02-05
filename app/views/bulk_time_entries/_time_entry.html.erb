@@ -31,7 +31,7 @@
       <%= render :partial => 'activities_selector', :locals => {:rnd => rnd, :activities => @first_project.activities } %>
     </p>
     <p id="entry_<%= rnd %>_members">
-    <% @members = get_members @first_project.id %>
+    <% @members = get_members @selected_project %>
     <%= render :partial => 'members_selector', :locals => { :members => @members, :f => f, :rnd => rnd } %>
     </p>
     <% time_entry.custom_field_values.each do |value| %>

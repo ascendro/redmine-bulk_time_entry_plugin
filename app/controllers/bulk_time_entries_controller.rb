@@ -18,8 +18,8 @@ class BulkTimeEntriesController < ApplicationController
 
   def load_assigned_issues
     @issues = get_issues(params[:project_id])
-    @members = get_members(params[:project_id])
     @selected_project = BulkTimeEntriesController.allowed_project?(params[:project_id])
+    @members = get_members(@selected_project)
     respond_to do |format|
       format.js {}
     end
@@ -59,7 +59,7 @@ class BulkTimeEntriesController < ApplicationController
       format.js {}
     end
   end
-  
+
   private
 
   def load_activities

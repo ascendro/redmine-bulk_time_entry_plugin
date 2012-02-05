@@ -40,10 +40,17 @@ module BulkTimeEntriesHelper
     end
   end
 
-  def get_members(project_id)
-    project = BulkTimeEntriesController.allowed_project?(project_id)
+  def get_members(project)
     members = []
-    members = project.members.all(:order => 'user_id ASC') if project
+    if project and BulkTimeEntriesController.allowed_project?(project.id) and
+      allowed_to_log_time_for_others(project)
+      members = project.members.all(:order => 'user_id ASC')
+    end
     members
+  end
+
+  def allowed_to_log_time_for_others(project)
+    User.current.roles_for_project(project).each {|role| return true if role.has_permission?(:log_time_for_others)}
+    false
   end
 end
