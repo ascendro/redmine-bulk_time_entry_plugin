@@ -21,8 +21,11 @@ module BulkTimeEntryPlugin
             
             time_entry.project_id = entry[:project_id] # project_id is protected from mass assignment
           end
-          time_entry.user = user ? user : User.current
+          time_entry.user = (user ? user : User.current)
           time_entry.save
+
+          lbu =  LoggedByUser.create!(:time_entry_id => time_entry.id, :logged_by => User.current.id) if user
+          
           time_entry
         end
         
