@@ -4,5 +4,6 @@ de:
   label_bulk_time_add_another: Weiteren Eintrag hinzufügen
   text_bulk_time_entry_permission: Sie haben keine Berechtigung um Zeiten für irgendein Projekt zu erfassen
   text_time_added_to_project: "%{count} Stunde/n im Projekt %{target} erfasst"
-  :log_time_for_others: Erfasse Zeit für andere
+  log_time_for_others: Erfasse Zeit für andere
   field_member: Erbracht durch
+  label_insufficient_right: Insufficient rights

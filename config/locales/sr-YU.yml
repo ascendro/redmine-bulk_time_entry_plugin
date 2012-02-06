@@ -1,7 +1,9 @@
 sr-YU:
-  :bulk_time_entry_title: Masovni unos vremena
-  :label_bulk_time_entries: Masovni unos vremena
-  :label_bulk_time_add_another: Dodaj novi
-  :text_bulk_time_entry_permission: Nemate dozvole za vođenje dnevnika vremena ni na jednom projektu
-  :text_time_added_to_project: "%{count} sati dodato na %{target}"
-  :log_time_for_others: Vođenje dnevnika vremena za druge
+  bulk_time_entry_title: Masovni unos vremena
+  label_bulk_time_entries: Masovni unos vremena
+  label_bulk_time_add_another: Dodaj novi
+  text_bulk_time_entry_permission: Nemate dozvole za vođenje dnevnika vremena ni na jednom projektu
+  text_time_added_to_project: "%{count} sati dodato na %{target}"
+  log_time_for_others: Vođenje dnevnika vremena za druge
+  field_member: U ime
+  label_insufficient_right: Nedovoljno prava
