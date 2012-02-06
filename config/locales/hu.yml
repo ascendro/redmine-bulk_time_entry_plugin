@@ -4,3 +4,4 @@
   label_bulk_time_add_another: További hozzáadása
   text_bulk_time_entry_permission: Nincs jogosultságod a projektek idejét naplózni
   text_time_added_to_project: "%{count} óra hozzáadva a  %{target}"
+  text_time_added_to_project_for: "%{count} hours added to %{target} for %{user}"

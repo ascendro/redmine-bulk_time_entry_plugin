@@ -4,6 +4,7 @@ en:
   label_bulk_time_add_another: Add Another
   text_bulk_time_entry_permission: You do not have permission to log time on any projects
   text_time_added_to_project: "%{count} hours added to %{target}"
+  text_time_added_to_project_for: "%{count} hours added to %{target} for %{user}"
   log_time_for_others: Log time for others
   field_member: Provided by
   label_insufficient_right: Insufficient rights

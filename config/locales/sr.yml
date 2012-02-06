@@ -3,7 +3,8 @@ sr:
   label_bulk_time_entries: Масовни унос времена
   label_bulk_time_add_another: Додај нови 
   text_bulk_time_entry_permission: Немате дозволе за вођење дневника времена ни на једном пројекту
-  text_time_added_to_project: "%{count} сати додато на %{target}"
+  text_time_added_to_project: "%{count} сата(и) додато на %{target}"
+  text_time_added_to_project_for: "%{count} сата(и) додато на %{target} за %{user}"
   log_time_for_others: Вођење дневника времена за друге
   field_member: У име
   label_insufficient_right: Недовољно права

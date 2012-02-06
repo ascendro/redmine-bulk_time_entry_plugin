@@ -8,5 +8,9 @@ end
                       else
                         "#{h(entry.project.name)}"
                       end
-  page.replace_html "entry_#{html_id}", "<div class='flash notice'>#{l(:text_time_added_to_project, :count => entry.hours, :target => time_entry_target)}#{" (#{entry.comments})" unless entry.comments.blank?}.</div>"
+  if entry.user.id != User.current.id
+    page.replace_html "entry_#{html_id}", "<div class='flash notice'>#{l(:text_time_added_to_project_for, :count => entry.hours, :target => time_entry_target, :user => entry.user.name)}#{" (#{entry.comments})" unless entry.comments.blank?}.</div>"
+  else
+    page.replace_html "entry_#{html_id}", "<div class='flash notice'>#{l(:text_time_added_to_project, :count => entry.hours, :target => time_entry_target)}#{" (#{entry.comments})" unless entry.comments.blank?}.</div>"
+  end
 end

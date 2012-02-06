@@ -4,4 +4,4 @@ nl:
   label_bulk_time_add_another: Voeg extra toe
   text_bulk_time_entry_permission: Je hebt geen rechten om op een project tijd te loggen
   text_time_added_to_project: %s uren toegevoegd aan project
-
+  text_time_added_to_project_for: "%{count} hours added to %{target} for %{user}"
