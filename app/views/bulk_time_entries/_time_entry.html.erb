@@ -7,8 +7,8 @@
     <%= error_messages_for 'time_entry', :object => time_entry %>
     <p>
       <%= label_for_field :project_id, rnd, :required => true %>
-      <% projects = project_tree_options_for_select(@projects, :selected => @first_project) %>
-      <%= f.select :project_id, projects, {}, 
+      <% projects = project_tree_options_for_select(@projects) %>
+      <%= f.select :project_id, projects, { :include_blank => true },
         { :onchange => "new Ajax.Request('#{url_for :action => 'load_assigned_issues'}', { parameters: { project_id: $F(this), entry_id: $(this).up(1).id } } )" } %>&nbsp;
     </p>
     <p id="entry_<%= rnd %>_issues">
